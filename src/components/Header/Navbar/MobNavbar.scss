@@ -1,0 +1,9 @@
+.navTitle {
+  &:hover .navItem {
+    display: block;
+  }
+}
+
+.navItem {
+  display: none;
+}

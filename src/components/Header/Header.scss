@@ -1,0 +1,35 @@
+@media screen and (max-width: 992px) {
+    .btnMenu{
+        flex: 1;
+    }
+    
+    .logo{
+        display: flex;
+        justify-content: center;
+        flex: 2;
+    }
+
+    // .navbar{
+    //     flex-direction: column;
+    //     position: fixed;
+    //     top: 0;
+    //     left: 0;
+    //     right: 0;
+    //     background-color: white;
+    //     padding: 0 40px;
+    //     div{
+    //         align-items: start !important;
+    //     }
+    //     div:not(div:first-child){
+    //         border-bottom: 1px solid #f4f2f0;
+    //     }
+    //     p{
+    //         color: black;
+    //     }
+    // }
+
+    .rightMenu{
+        flex: 1;
+        justify-content: end;
+    }
+}
