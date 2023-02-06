@@ -1,0 +1,24 @@
+button.slick-arrow.slick-prev::before,
+button.slick-arrow.slick-next::before{
+    color: rgb(239 68 68);
+    padding: 5px 15px;
+    content: "";
+    background-image: url("https://cdn.shopify.com/s/files/1/0588/1443/1414/t/3/assets/red-arrow.svg");
+    background-size: auto;
+    background-position-y: center;
+    background-repeat: no-repeat;
+}
+
+button.slick-arrow.slick-prev{
+    left: -10px;
+    transform: rotate(180deg);
+}
+
+button.slick-arrow.slick-next{
+    right: -10px;
+
+}
+
+.slick-next, .slick-prev {
+    z-index: 10;
+}

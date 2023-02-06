@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { AiOutlineClose, AiOutlineLeft } from "react-icons/ai";
 import { Link } from "react-router-dom";
 
@@ -79,9 +79,11 @@ export default function Menu({
                       ? styles.Underline
                       : ""
                   } ${onMobile ? styles.MobileItem : ""}`}
-                  onClick={()=>setOpen(false)}
+                  onClick={() => setOpen(false)}
                 >
-                  <Link to={value.patch}>{value.title}</Link>
+                  <Link to={value.patch}>
+                    {value.title}
+                  </Link>
                 </p>
               );
             })}
@@ -91,16 +93,20 @@ export default function Menu({
 
       {/* render with props Child (megamenu)*/}
       {Open && Child && (
-        <div className={`${onMobile?styles.NavItemMegaMobile:styles.NavItemMega}`}>
+        <div
+          className={`${
+            onMobile ? styles.NavItemMegaMobile : styles.NavItemMega
+          }`}
+        >
           {/* close and back */}
           {onMobile && (
-              <>
-                <CloseAndBack
-                  BackFunc={() => setOpen(false)}
-                  CloseFunc={() => CloseHandle()}
-                />
-              </>
-            )}
+            <>
+              <CloseAndBack
+                BackFunc={() => setOpen(false)}
+                CloseFunc={() => CloseHandle()}
+              />
+            </>
+          )}
           {/* render */}
           {typeof Child == "function" ? <Child /> : Child}
         </div>
@@ -122,7 +128,7 @@ export default function Menu({
                 ? styles.Underline
                 : ""
             } ${styles.ItemMega}`}
-            onClick={()=>setOpen(false)}
+            onClick={() => {setOpen(false); console.log(1);}}
           >
             {/* ẩn khi click !!! */}
             <Link to={value.patch}>{value.title}</Link>

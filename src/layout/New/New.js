@@ -1,7 +1,15 @@
-import React from 'react'
-
+import React, { useState } from "react";
 export default function New() {
+
   return (
-    <div>New</div>
-  )
+    <div>
+      
+    </div>
+  );
 }
+
+const func = (a) => {
+  return a
+}
+
+func("")

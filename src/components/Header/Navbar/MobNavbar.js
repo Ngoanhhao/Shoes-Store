@@ -42,6 +42,7 @@ export default function MobNavbar({ onClick }) {
                             <Menu
                               key={key}
                               label={<Link to={value.patch}>{value[0].title}</Link>}
+                              CloseHandle={onClick}
                               RightIcon={<AiOutlinePlus/>}
                               TitleStyle={{ color: "Black" }}
                               onMobile
