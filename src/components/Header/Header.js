@@ -9,7 +9,7 @@ import { BsBox } from "react-icons/bs";
 
 import { images } from "../../assets/img";
 import Navbar from "./Navbar/Navbar";
-import "./Header.scss";
+import "./styles/Header.scss";
 import MobNavbar from "./Navbar/MobNavbar";
 import { Link } from "react-router-dom";
 import { rounters } from "../../router/router";
@@ -57,7 +57,7 @@ export default function Header() {
       onMouseLeave={() => setonScroll(true)}
     >
       <div
-        className={`flex justify-between h-[4.5rem] fixed top-0 left-0 right-0 items-center px-10 pr-10 ${
+        className={`flex justify-between h-[4.5rem] fixed top-0 left-0 right-0 items-center px-10 pr-10 z-10 ${
           onScroll ? "bg-transparent" : "bg-white"
         }`}
         style={{ transition: "all .5s ease" }}

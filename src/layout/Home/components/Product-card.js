@@ -1,14 +1,28 @@
-import React from 'react'
+import React, { useState } from 'react';
+import './style/Product-card.scss';
 
 export default function ProductCard({ imgSrc, title, name, price }) {
-  return (
-    <div className='px-2'>
-        <img className='w-full' src={imgSrc} alt={name}/>
-        <div className='flex justify-between'>
-            <h1>{title}</h1>
-            <p>{price}</p>
+    var [onHover, setOnhover] = useState(false);
+    return (
+        <div
+            className="px-2 card-item"
+            onMouseEnter={() => setOnhover(true)}
+            onMouseLeave={() => setOnhover(false)}
+        >
+            <div className='overflow-hidden'>
+                <img
+                    className={`w-full transition-all ${
+                        onHover ? 'scale' : ''
+                    }`}
+                    src={imgSrc}
+                    alt={name}
+                />
+            </div>
+            <div className="flex justify-between my-1">
+                <h1 className="font-medium">{title}</h1>
+                <p className="text-sm">{price}</p>
+            </div>
+            <p className="text-left text-sm">{name}</p>
         </div>
-        <p className='text-left'>{name}</p>
-    </div>
-  )
+    );
 }

@@ -1,0 +1,27 @@
+.shopNow {
+    display: inline-flex;
+    position: relative;
+    padding: .5rem 2.5rem .5rem 0rem;
+    cursor: pointer;
+    &::after {
+        position: absolute;
+        content: ' ';
+        background-image: url(//cdn.shopify.com/s/files/1/0588/1443/1414/t/3/assets/red-arrow.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        display: inline-block;
+        width: 1.5rem;
+        height: 0.5rem;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: all 0.25s ease-in-out;
+    }
+    &:hover{
+        color: #ce0e2d;
+    }
+    &:hover::after{
+        right: -5px;
+    }
+}
