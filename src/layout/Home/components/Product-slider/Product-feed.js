@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import Slider from 'react-slick';
-import './style/slider.scss';
+import '../../style/slider.scss';
 import ProductCard from './Product-card';
-import product from '../../../api-service/product-categories';
-import "./style/Product-feed.scss"
+import product from '../../../../api-service/product-categories';
+import "../../style/Product-feed.scss"
 
 export default function ProductFeed({ category = 1 }) {
     var settings = {

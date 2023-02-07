@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './style/Product-card.scss';
+import '../../style/Product-card.scss';
 
 export default function ProductCard({ imgSrc, title, name, price }) {
     var [onHover, setOnhover] = useState(false);
@@ -9,7 +9,7 @@ export default function ProductCard({ imgSrc, title, name, price }) {
             onMouseEnter={() => setOnhover(true)}
             onMouseLeave={() => setOnhover(false)}
         >
-            <div className='overflow-hidden'>
+            <div className="overflow-hidden">
                 <img
                     className={`w-full transition-all ${
                         onHover ? 'scale' : ''
